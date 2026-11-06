@@ -3,139 +3,185 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SMC Nightwatch Academy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMC Nightwatch Visual Academy</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:#080808;color:#eee;font-family:Arial,sans-serif;line-height:1.7}
-header{padding:18px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #493719;position:sticky;top:0;background:#080808;z-index:5}
-.logo{color:#e5bd67;font-weight:bold;font-size:20px}
-nav a{color:#ddd;text-decoration:none;margin-left:13px;font-size:13px}
-.hero{text-align:center;padding:90px 20px;background:radial-gradient(circle,#38280e,#080808 70%)}
-.hero small{color:#e5bd67;letter-spacing:3px}
-h1{font-size:42px;color:#e5bd67;line-height:1.2;margin:15px 0}
-.hero p{max-width:600px;margin:15px auto;color:#bbb}
-.btn{display:inline-block;background:#d8ad54;color:#080808;padding:12px 24px;text-decoration:none;border-radius:5px;font-weight:bold;margin:15px 5px}
-section{padding:60px 8%}
-h2{color:#e5bd67;margin-bottom:20px}
-.intro{color:#bbb;margin-bottom:25px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:#151515;border:1px solid #493719;padding:22px;border-radius:9px}
-.card h3{color:#d8ad54;margin-bottom:10px}
-.card p{color:#bbb;font-size:14px}
-.tag{color:#e5bd67;font-size:12px}
-.lesson{margin-top:14px;color:#ddd;font-size:14px}
-.lesson strong{color:#e5bd67}
-.roadmap{border-left:2px solid #d8ad54;padding-left:20px}
-.roadmap div{margin:18px 0}
-.community{text-align:center;background:#17130c}
-.community p{color:#bbb}
-footer{text-align:center;padding:30px;border-top:1px solid #493719;color:#999}
-a{color:#e5bd67}
-@media(max-width:600px){h1{font-size:32px}nav a{margin-left:7px;font-size:12px}}
+*{box-sizing:border-box}
+body{margin:0;background:#080808;color:#eee;font-family:Arial,sans-serif;line-height:1.7}
+header{padding:18px 6%;background:#111;border-bottom:1px solid #59421e}
+.logo{color:#e5bd67;font-weight:bold;font-size:21px}
+nav{margin-top:12px}
+nav a{color:#e5bd67;text-decoration:none;margin-right:16px;font-size:13px}
+.hero{text-align:center;padding:65px 18px;background:radial-gradient(circle,#35250d,#080808 75%)}
+h1,h2,h3{color:#e5bd67}
+h1{font-size:35px;line-height:1.2}
+.hero p,.intro{color:#bbb}
+section{padding:45px 6%}
+.lesson{background:#151515;border:1px solid #493719;border-radius:12px;padding:18px;margin:20px 0}
+.chart{background:#080d12;border:1px solid #343b43;border-radius:8px;padding:12px;margin:15px 0;overflow:hidden}
+.chart svg{width:100%;height:auto;display:block}
+.explain{color:#bbb;font-size:14px}
+.tag{color:#d8ad54;font-size:12px;font-weight:bold}
+footer{text-align:center;padding:30px;color:#aaa;border-top:1px solid #493719}
 </style>
 </head>
 <body>
 <header>
 <div class="logo">SMC NIGHTWATCH</div>
 <nav>
-<a href="#academy">Academy</a>
-<a href="#roadmap">Roadmap</a>
-<a href="#community">Community</a>
+<a href="#visual">Visual Lessons</a>
+<a href="#practice">Practice</a>
+<a href="#about">About</a>
 </nav>
 </header>
 
 <div class="hero">
-<small>WELCOME TO THE ACADEMY</small>
-<h1>Understand the Market.<br>Trade with Precision.</h1>
-<p>A free learning space for traders who want to understand Smart Money Concepts, study price action and build discipline.</p>
-<a class="btn" href="#academy">EXPLORE LESSONS</a>
+<p>SMC NIGHTWATCH PRESENTS</p>
+<h1>Learn Smart Money Concepts Visually.</h1>
+<p>Understand price action through simple chart illustrations and structured lessons.</p>
 </div>
+
+<section id="visual">
+<h2>SMC Visual Learning Centre</h2>
+<p class="intro">Study each concept. Understand what price is doing before considering a trade.</p>
+
+<div class="lesson">
+<span class="tag">LESSON 01 · MARKET STRUCTURE</span>
+<h3>Bullish and Bearish Structure</h3>
+<div class="chart">
+<svg viewBox="0 0 340 180">
+<g stroke="#29333c" stroke-width="1">
+<path d="M10 40H330 M10 90H330 M10 140H330"/>
+</g>
+<g fill="none" stroke="#38c987" stroke-width="3">
+<path d="M15 135 L65 95 L105 115 L155 65 L195 85 L250 25 L315 48"/>
+</g>
+<g fill="#38c987" font-size="10">
+<text x="45" y="85">HH</text><text x="90" y="130">HL</text>
+<text x="145" y="55">HH</text><text x="190" y="100">HL</text>
+<text x="250" y="18">HH</text>
+</g>
+<text x="15" y="165" fill="#38c987" font-size="11">BULLISH: Higher highs + higher lows</text>
+</svg>
+</div>
+<div class="chart">
+<svg viewBox="0 0 340 180">
+<g stroke="#29333c"><path d="M10 40H330 M10 90H330 M10 140H330"/></g>
+<path d="M15 25 L65 65 L105 45 L155 105 L195 85 L250 145 L315 120" fill="none" stroke="#ed6666" stroke-width="3"/>
+<g fill="#ed7777" font-size="10">
+<text x="40" y="55">LL</text><text x="90" y="38">LH</text>
+<text x="145" y="98">LL</text><text x="190" y="78">LH</text>
+<text x="250" y="160">LL</text>
+</g>
+<text x="15" y="175" fill="#ed7777" font-size="11">BEARISH: Lower lows + lower highs</text>
+</svg>
+</div>
+<p class="explain">An uptrend generally forms higher highs (HH) and higher lows (HL). A downtrend generally forms lower lows (LL) and lower highs (LH).</p>
+</div>
+
+<div class="lesson">
+<span class="tag">LESSON 02 · BREAK OF STRUCTURE</span>
+<h3>BOS – Break of Structure</h3>
+<div class="chart">
+<svg viewBox="0 0 340 165">
+<path d="M10 125 L60 75 L105 105 L155 55 L205 85 L250 20 L320 35" fill="none" stroke="#38c987" stroke-width="3"/>
+<path d="M155 55H325" stroke="#e5bd67" stroke-dasharray="5 4"/>
+<path d="M250 20V55" stroke="#38c987" stroke-width="2"/>
+<text x="165" y="47" fill="#e5bd67" font-size="11">Previous high</text>
+<text x="255" y="15" fill="#38c987" font-size="11">BOS</text>
+</svg>
+</div>
+<p class="explain">A bullish BOS occurs when price breaks a significant previous swing high. A bearish BOS occurs when price breaks a significant swing low. Look for a meaningful candle close beyond the level.</p>
+</div>
+
+<div class="lesson">
+<span class="tag">LESSON 03 · CHANGE OF CHARACTER</span>
+<h3>CHoCH – Possible Market Shift</h3>
+<div class="chart">
+<svg viewBox="0 0 340 165">
+<path d="M15 25 L65 65 L105 45 L150 100 L195 75 L250 125 L320 85" fill="none" stroke="#ed7777" stroke-width="3"/>
+<path d="M195 75H325" stroke="#e5bd67" stroke-dasharray="5 4"/>
+<text x="205" y="65" fill="#e5bd67" font-size="12">CHoCH</text>
+<text x="15" y="155" fill="#aaa" font-size="10">Bearish structure breaks upward</text>
+</svg>
+</div>
+<p class="explain">A bullish CHoCH can occur when price breaks a meaningful lower high during a downtrend. It suggests a possible change in direction, not guaranteed reversal.</p>
+</div>
+
+<div class="lesson">
+<span class="tag">LESSON 04 · LIQUIDITY</span>
+<h3>Liquidity Sweep</h3>
+<div class="chart">
+<svg viewBox="0 0 340 165">
+<path d="M15 65H325" stroke="#e5bd67" stroke-dasharray="5 4"/>
+<path d="M15 105 L70 80 L115 100 L165 75 L210 90 L250 25 L285 80 L325 105" fill="none" stroke="#38c987" stroke-width="3"/>
+<path d="M250 25V65" stroke="#ed7777" stroke-width="2"/>
+<text x="15" y="55" fill="#e5bd67" font-size="11">Liquidity above highs</text>
+<text x="255" y="18" fill="#ed7777" font-size="11">Sweep</text>
+</svg>
+</div>
+<p class="explain">Price moves above a previous high, where buy-side liquidity may sit, then rejects back below. A sweep needs further confirmation before becoming a trading setup.</p>
+</div>
+
+<div class="lesson">
+<span class="tag">LESSON 05 · ORDER BLOCK</span>
+<h3>Order Blocks</h3>
+<div class="chart">
+<svg viewBox="0 0 340 165">
+<rect x="15" y="85" width="310" height="30" fill="#d8ad54" opacity=".22"/>
+<rect x="15" y="85" width="310" height="30" stroke="#d8ad54" fill="none" stroke-dasharray="4 3"/>
+<path d="M15 65 L65 100 L105 90 L150 35 L205 15 L255 5" fill="none" stroke="#38c987" stroke-width="3"/>
+<text x="20" y="130" fill="#e5bd67" font-size="11">Bullish OB zone – illustration</text>
+</svg>
+</div>
+<p class="explain">A bullish order block is commonly studied around the last bearish candle before strong bullish displacement. Traders examine the context and structure break before considering the zone.</p>
+</div>
+
+<div class="lesson">
+<span class="tag">LESSON 06 · FAIR VALUE GAP</span>
+<h3>FVG – Fair Value Gap</h3>
+<div class="chart">
+<svg viewBox="0 0 340 165">
+<g stroke-width="2">
+<path d="M60 115V65 M45 80H75" stroke="#38c987"/>
+<rect x="53" y="80" width="14" height="35" fill="#38c987"/>
+<path d="M165 95V10 M150 20H180" stroke="#38c987"/>
+<rect x="158" y="20" width="14" height="75" fill="#38c987"/>
+<path d="M265 75V35 M250 45H280" stroke="#38c987"/>
+<rect x="258" y="45" width="14" height="30" fill="#38c987"/>
+</g>
+<rect x="180" y="45" width="70" height="30" fill="#d8ad54" opacity=".25"/>
+<path d="M180 45H250 M180 75H250" stroke="#e5bd67" stroke-dasharray="4 3"/>
+<text x="185" y="38" fill="#e5bd67" font-size="11">FVG zone</text>
+</svg>
+</div>
+<p class="explain">A bullish FVG is the imbalance between candle one's high and candle three's low when they do not overlap. A bearish FVG is the opposite. Price may revisit these zones, but a fill is not guaranteed.</p>
+</div>
+</section>
+
+<section id="practice">
+<h2>Practice Before Trading</h2>
+<div class="lesson">
+<h3>Your learning checklist</h3>
+<p class="explain">✓ Identify the market trend.</p>
+<p class="explain">✓ Mark significant swing highs and lows.</p>
+<p class="explain">✓ Identify BOS and CHoCH.</p>
+<p class="explain">✓ Mark liquidity levels.</p>
+<p class="explain">✓ Study OB and FVG zones.</p>
+<p class="explain">✓ Backtest and practise risk management.</p>
+</div>
+</section>
 
 <section id="about">
 <h2>About SMC Nightwatch</h2>
-<p class="intro">SMC Nightwatch is a trading education community. Our mission is to make Smart Money Concepts easier to understand through structured lessons, practical examples and disciplined learning. We focus on education, not guaranteed profits.</p>
-</section>
-
-<section id="academy">
-<h2>SMC Learning Academy</h2>
-<p class="intro">Start with the basics and work your way towards advanced market concepts.</p>
-<div class="cards">
-<div class="card">
-<span class="tag">LESSON 01 · BEGINNER</span>
-<h3>Market Structure</h3>
-<p>Learn how price moves through trends.</p>
-<div class="lesson"><strong>Uptrend:</strong> Higher Highs (HH) and Higher Lows (HL).</div>
-<div class="lesson"><strong>Downtrend:</strong> Lower Highs (LH) and Lower Lows (LL).</div>
-</div>
-<div class="card">
-<span class="tag">LESSON 02 · BEGINNER</span>
-<h3>Break of Structure (BOS)</h3>
-<p>BOS occurs when price breaks a significant swing point in the direction of the existing trend.</p>
-<div class="lesson"><strong>Remember:</strong> Look for a meaningful break, preferably confirmed by a candle close.</div>
-</div>
-<div class="card">
-<span class="tag">LESSON 03 · INTERMEDIATE</span>
-<h3>Change of Character (CHoCH)</h3>
-<p>A potential early signal that the existing market direction may be changing.</p>
-<div class="lesson"><strong>Remember:</strong> Wait for further confirmation before taking a trade.</div>
-</div>
-<div class="card">
-<span class="tag">LESSON 04 · INTERMEDIATE</span>
-<h3>Liquidity</h3>
-<p>Liquidity often gathers around equal highs, equal lows and obvious swing points.</p>
-<div class="lesson"><strong>Study:</strong> Buy-side liquidity (BSL) and sell-side liquidity (SSL).</div>
-</div>
-<div class="card">
-<span class="tag">LESSON 05 · INTERMEDIATE</span>
-<h3>Liquidity Sweep</h3>
-<p>Price moves beyond a liquidity level and then rejects or returns back through it.</p>
-<div class="lesson"><strong>Study:</strong> Watch for rejection and structure confirmation. A sweep alone is not an entry signal.</div>
-</div>
-<div class="card">
-<span class="tag">LESSON 06 · ADVANCED</span>
-<h3>Order Blocks</h3>
-<p>Study potential reaction zones around the last opposing candle before a strong price move.</p>
-<div class="lesson"><strong>Study:</strong> Look for displacement, structure breaks and a return to the zone.</div>
-</div>
-<div class="card">
-<span class="tag">LESSON 07 · ADVANCED</span>
-<h3>Fair Value Gaps (FVG)</h3>
-<p>An imbalance between three candles where price moves quickly through an area.</p>
-<div class="lesson"><strong>Study:</strong> Bullish FVG and bearish FVG, and how price reacts when revisiting them.</div>
-</div>
-<div class="card">
-<span class="tag">LESSON 08 · ADVANCED</span>
-<h3>Multi-Timeframe Analysis</h3>
-<p>Combine higher and lower timeframes to build a structured trading idea.</p>
-<div class="lesson"><strong>Example:</strong> Daily or 4H bias, 1H setup, 15M confirmation.</div>
-</div>
-</div>
-</section>
-
-<section id="roadmap">
-<h2>Your Learning Roadmap</h2>
-<div class="roadmap">
-<div><strong>01. Understand structure</strong><p>Learn HH, HL, LH and LL.</p></div>
-<div><strong>02. Learn market shifts</strong><p>Study BOS and CHoCH.</p></div>
-<div><strong>03. Understand liquidity</strong><p>Study liquidity pools and sweeps.</p></div>
-<div><strong>04. Study entry zones</strong><p>Learn Order Blocks and FVGs.</p></div>
-<div><strong>05. Build a trading plan</strong><p>Practice risk management, confirmation and patience.</p></div>
-</div>
-</section>
-
-<section id="community" class="community">
-<h2>Join SMC Nightwatch</h2>
-<p>Learn together. Share ideas. Improve your understanding.</p>
-<p style="margin-top:15px">TikTok: @SMCNightwatchNG</p>
-<p>Learn. Practice. Stay Disciplined.</p>
+<p class="intro">A free trading education community helping learners understand Smart Money Concepts through structured lessons and chart study.</p>
+<p class="intro">TikTok: @SMCNightwatchNG</p>
 </section>
 
 <footer>
-<p>SMC NIGHTWATCH ACADEMY © 2026</p>
-<p>@SMCNightwatchNG</p>
-<p>Education only. Trading involves risk.</p>
+SMC NIGHTWATCH © 2026<br>
+Learn. Practice. Stay Disciplined.<br>
+Educational content only. Trading involves risk.
 </footer>
 </body>
 </html>
