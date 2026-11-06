@@ -4,63 +4,138 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SMC Nightwatch</title>
+<title>SMC Nightwatch Academy</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{background:#080808;color:#eee;font-family:Arial,sans-serif;line-height:1.7}
-header{padding:22px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #332819}
-.logo{color:#e5bd67;font-size:21px;font-weight:bold}
-nav a{color:#ddd;text-decoration:none;margin-left:15px;font-size:13px}
-.hero{text-align:center;padding:100px 20px;background:radial-gradient(circle,#30230e,#080808 70%)}
-.hero h1{font-size:42px;color:#e5bd67;line-height:1.2}
-.hero p{max-width:550px;margin:18px auto;color:#bbb}
-.btn{display:inline-block;background:#d8ad54;color:#080808;padding:12px 25px;text-decoration:none;border-radius:5px;font-weight:bold;margin-top:20px}
-section{padding:65px 8%}
+header{padding:18px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #493719;position:sticky;top:0;background:#080808;z-index:5}
+.logo{color:#e5bd67;font-weight:bold;font-size:20px}
+nav a{color:#ddd;text-decoration:none;margin-left:13px;font-size:13px}
+.hero{text-align:center;padding:90px 20px;background:radial-gradient(circle,#38280e,#080808 70%)}
+.hero small{color:#e5bd67;letter-spacing:3px}
+h1{font-size:42px;color:#e5bd67;line-height:1.2;margin:15px 0}
+.hero p{max-width:600px;margin:15px auto;color:#bbb}
+.btn{display:inline-block;background:#d8ad54;color:#080808;padding:12px 24px;text-decoration:none;border-radius:5px;font-weight:bold;margin:15px 5px}
+section{padding:60px 8%}
 h2{color:#e5bd67;margin-bottom:20px}
+.intro{color:#bbb;margin-bottom:25px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:#151515;border:1px solid #44341c;padding:22px;border-radius:9px}
+.card{background:#151515;border:1px solid #493719;padding:22px;border-radius:9px}
 .card h3{color:#d8ad54;margin-bottom:10px}
 .card p{color:#bbb;font-size:14px}
-footer{text-align:center;padding:30px;border-top:1px solid #332819;color:#999}
+.tag{color:#e5bd67;font-size:12px}
+.lesson{margin-top:14px;color:#ddd;font-size:14px}
+.lesson strong{color:#e5bd67}
+.roadmap{border-left:2px solid #d8ad54;padding-left:20px}
+.roadmap div{margin:18px 0}
+.community{text-align:center;background:#17130c}
+.community p{color:#bbb}
+footer{text-align:center;padding:30px;border-top:1px solid #493719;color:#999}
+a{color:#e5bd67}
+@media(max-width:600px){h1{font-size:32px}nav a{margin-left:7px;font-size:12px}}
 </style>
 </head>
 <body>
 <header>
 <div class="logo">SMC NIGHTWATCH</div>
 <nav>
-<a href="#learn">Learn</a>
-<a href="#about">About</a>
+<a href="#academy">Academy</a>
+<a href="#roadmap">Roadmap</a>
+<a href="#community">Community</a>
 </nav>
 </header>
 
 <div class="hero">
-<p>WELCOME TO SMC NIGHTWATCH</p>
+<small>WELCOME TO THE ACADEMY</small>
 <h1>Understand the Market.<br>Trade with Precision.</h1>
-<p>Your journey into Smart Money Concepts starts here. Learn market structure, liquidity and institutional trading concepts step by step.</p>
-<a class="btn" href="#learn">START LEARNING</a>
+<p>A free learning space for traders who want to understand Smart Money Concepts, study price action and build discipline.</p>
+<a class="btn" href="#academy">EXPLORE LESSONS</a>
 </div>
 
 <section id="about">
 <h2>About SMC Nightwatch</h2>
-<p>SMC Nightwatch is a learning community helping traders understand Smart Money Concepts, improve chart analysis and develop discipline. Learn at your own pace. Education first, no promises of guaranteed profits.</p>
+<p class="intro">SMC Nightwatch is a trading education community. Our mission is to make Smart Money Concepts easier to understand through structured lessons, practical examples and disciplined learning. We focus on education, not guaranteed profits.</p>
 </section>
 
-<section id="learn">
-<h2>Explore SMC Concepts</h2>
+<section id="academy">
+<h2>SMC Learning Academy</h2>
+<p class="intro">Start with the basics and work your way towards advanced market concepts.</p>
 <div class="cards">
-<div class="card"><h3>Market Structure</h3><p>Understand higher highs, higher lows, lower highs and lower lows.</p></div>
-<div class="card"><h3>BOS</h3><p>Learn how Break of Structure helps identify market continuation.</p></div>
-<div class="card"><h3>CHoCH</h3><p>Understand Change of Character and possible shifts in market direction.</p></div>
-<div class="card"><h3>Liquidity</h3><p>Discover where stop losses and liquidity commonly gather.</p></div>
-<div class="card"><h3>Order Blocks</h3><p>Study potential institutional reaction zones on charts.</p></div>
-<div class="card"><h3>Fair Value Gaps</h3><p>Understand price imbalances and how traders study them.</p></div>
+<div class="card">
+<span class="tag">LESSON 01 · BEGINNER</span>
+<h3>Market Structure</h3>
+<p>Learn how price moves through trends.</p>
+<div class="lesson"><strong>Uptrend:</strong> Higher Highs (HH) and Higher Lows (HL).</div>
+<div class="lesson"><strong>Downtrend:</strong> Lower Highs (LH) and Lower Lows (LL).</div>
+</div>
+<div class="card">
+<span class="tag">LESSON 02 · BEGINNER</span>
+<h3>Break of Structure (BOS)</h3>
+<p>BOS occurs when price breaks a significant swing point in the direction of the existing trend.</p>
+<div class="lesson"><strong>Remember:</strong> Look for a meaningful break, preferably confirmed by a candle close.</div>
+</div>
+<div class="card">
+<span class="tag">LESSON 03 · INTERMEDIATE</span>
+<h3>Change of Character (CHoCH)</h3>
+<p>A potential early signal that the existing market direction may be changing.</p>
+<div class="lesson"><strong>Remember:</strong> Wait for further confirmation before taking a trade.</div>
+</div>
+<div class="card">
+<span class="tag">LESSON 04 · INTERMEDIATE</span>
+<h3>Liquidity</h3>
+<p>Liquidity often gathers around equal highs, equal lows and obvious swing points.</p>
+<div class="lesson"><strong>Study:</strong> Buy-side liquidity (BSL) and sell-side liquidity (SSL).</div>
+</div>
+<div class="card">
+<span class="tag">LESSON 05 · INTERMEDIATE</span>
+<h3>Liquidity Sweep</h3>
+<p>Price moves beyond a liquidity level and then rejects or returns back through it.</p>
+<div class="lesson"><strong>Study:</strong> Watch for rejection and structure confirmation. A sweep alone is not an entry signal.</div>
+</div>
+<div class="card">
+<span class="tag">LESSON 06 · ADVANCED</span>
+<h3>Order Blocks</h3>
+<p>Study potential reaction zones around the last opposing candle before a strong price move.</p>
+<div class="lesson"><strong>Study:</strong> Look for displacement, structure breaks and a return to the zone.</div>
+</div>
+<div class="card">
+<span class="tag">LESSON 07 · ADVANCED</span>
+<h3>Fair Value Gaps (FVG)</h3>
+<p>An imbalance between three candles where price moves quickly through an area.</p>
+<div class="lesson"><strong>Study:</strong> Bullish FVG and bearish FVG, and how price reacts when revisiting them.</div>
+</div>
+<div class="card">
+<span class="tag">LESSON 08 · ADVANCED</span>
+<h3>Multi-Timeframe Analysis</h3>
+<p>Combine higher and lower timeframes to build a structured trading idea.</p>
+<div class="lesson"><strong>Example:</strong> Daily or 4H bias, 1H setup, 15M confirmation.</div>
+</div>
 </div>
 </section>
 
-<footer>
-<p>SMC NIGHTWATCH © 2026</p>
-<p>@SMCNightwatchNG</p>
+<section id="roadmap">
+<h2>Your Learning Roadmap</h2>
+<div class="roadmap">
+<div><strong>01. Understand structure</strong><p>Learn HH, HL, LH and LL.</p></div>
+<div><strong>02. Learn market shifts</strong><p>Study BOS and CHoCH.</p></div>
+<div><strong>03. Understand liquidity</strong><p>Study liquidity pools and sweeps.</p></div>
+<div><strong>04. Study entry zones</strong><p>Learn Order Blocks and FVGs.</p></div>
+<div><strong>05. Build a trading plan</strong><p>Practice risk management, confirmation and patience.</p></div>
+</div>
+</section>
+
+<section id="community" class="community">
+<h2>Join SMC Nightwatch</h2>
+<p>Learn together. Share ideas. Improve your understanding.</p>
+<p style="margin-top:15px">TikTok: @SMCNightwatchNG</p>
 <p>Learn. Practice. Stay Disciplined.</p>
+</section>
+
+<footer>
+<p>SMC NIGHTWATCH ACADEMY © 2026</p>
+<p>@SMCNightwatchNG</p>
+<p>Education only. Trading involves risk.</p>
 </footer>
 </body>
 </html>
