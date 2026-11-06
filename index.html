@@ -183,5 +183,272 @@ SMC NIGHTWATCH © 2026<br>
 Learn. Practice. Stay Disciplined.<br>
 Educational content only. Trading involves risk.
 </footer>
-</body>
+</body> 
+<!-- SMC NIGHTWATCH QUIZ CENTRE -->
+<section id="quiz-centre">
+  <div class="quiz-heading">
+    <span>SMC NIGHTWATCH ACADEMY</span>
+    <h2>Test Your SMC Knowledge</h2>
+    <p>Learn the concepts. Test your understanding. Trade with precision.</p>
+  </div>
+
+  <div class="quiz-card">
+    <div class="quiz-top">
+      <span id="quiz-progress">Question 1 of 5</span>
+      <span id="quiz-score">Score: 0</span>
+    </div>
+
+    <div class="quiz-bar">
+      <div id="quiz-fill"></div>
+    </div>
+
+    <h3 id="quiz-question">What does BOS mean in SMC?</h3>
+
+    <div id="quiz-options"></div>
+
+    <p id="quiz-feedback"></p>
+
+    <button id="quiz-next" onclick="nextSMCQuestion()" disabled>
+      Next Question →
+    </button>
+
+    <button id="quiz-restart" onclick="restartSMCQuiz()" hidden>
+      Try Again
+    </button>
+  </div>
+</section>
+
+<style>
+#quiz-centre {
+  background: #080808;
+  color: #eee;
+  padding: 55px 18px;
+  font-family: Arial, sans-serif;
+}
+.quiz-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: auto auto 30px;
+}
+.quiz-heading span {
+  color: #d4af37;
+  letter-spacing: 3px;
+  font-size: 11px;
+}
+.quiz-heading h2 {
+  color: #d4af37;
+  font-size: 28px;
+  margin: 12px 0;
+}
+.quiz-heading p {
+  color: #aaa;
+}
+.quiz-card {
+  max-width: 550px;
+  margin: auto;
+  padding: 24px;
+  background: #111;
+  border: 1px solid #80651d;
+  border-radius: 14px;
+}
+.quiz-top {
+  display: flex;
+  justify-content: space-between;
+  color: #d4af37;
+  font-size: 13px;
+}
+.quiz-bar {
+  height: 6px;
+  background: #292929;
+  border-radius: 10px;
+  margin: 15px 0 25px;
+  overflow: hidden;
+}
+#quiz-fill {
+  width: 20%;
+  height: 100%;
+  background: #d4af37;
+  transition: width .3s;
+}
+#quiz-question {
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+.quiz-option {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  background: #191919;
+  color: #eee;
+  border: 1px solid #444;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+}
+.quiz-option:disabled {
+  opacity: 1;
+}
+.quiz-option.correct {
+  border-color: #28a745;
+  background: #12301b;
+}
+.quiz-option.wrong {
+  border-color: #d9534f;
+  background: #351616;
+}
+#quiz-feedback {
+  min-height: 25px;
+  color: #d4af37;
+  font-size: 14px;
+}
+#quiz-next, #quiz-restart {
+  width: 100%;
+  padding: 14px;
+  margin-top: 12px;
+  background: #d4af37;
+  color: #080808;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#quiz-next:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+</style>
+
+<script>
+const smcQuestions = [
+  {
+    q: "What does BOS mean in SMC?",
+    a: ["Break of Structure", "Balance of Supply", "Beginning of Session", "Block of Support"],
+    c: 0,
+    e: "BOS means Break of Structure. It describes price breaking a significant structural high or low."
+  },
+  {
+    q: "What does CHoCH commonly signal?",
+    a: ["A guaranteed entry", "A possible change in market character", "A news release", "A fixed stop loss"],
+    c: 1,
+    e: "CHoCH means Change of Character. It can suggest a shift in market behaviour."
+  },
+  {
+    q: "What is a liquidity sweep?",
+    a: ["Price collecting orders around a liquidity level", "Price closing the market", "A moving average crossover", "A broker changing spreads"],
+    c: 0,
+    e: "A liquidity sweep occurs when price moves through a level where stop orders or liquidity may be resting."
+  },
+  {
+    q: "What does FVG stand for?",
+    a: ["Forex Value Gap", "Fair Value Gap", "Fast Volume Growth", "Fixed Value Group"],
+    c: 1,
+    e: "FVG means Fair Value Gap. It is an imbalance in price delivery."
+  },
+  {
+    q: "What is an Order Block commonly associated with?",
+    a: ["An area of potential institutional order activity", "A guaranteed reversal point", "A trading account password", "A news calendar"],
+    c: 0,
+    e: "An Order Block is commonly studied as a potential area of significant buying or selling activity. It is not a guaranteed reaction zone."
+  }
+];
+
+let smcIndex = 0;
+let smcScore = 0;
+let smcAnswered = false;
+
+function showSMCQuestion() {
+  const q = smcQuestions[smcIndex];
+  smcAnswered = false;
+
+  document.getElementById("quiz-progress").textContent =
+    "Question " + (smcIndex + 1) + " of " + smcQuestions.length;
+
+  document.getElementById("quiz-score").textContent =
+    "Score: " + smcScore;
+
+  document.getElementById("quiz-fill").style.width =
+    ((smcIndex + 1) / smcQuestions.length * 100) + "%";
+
+  document.getElementById("quiz-question").textContent = q.q;
+  document.getElementById("quiz-feedback").textContent = "";
+  document.getElementById("quiz-next").disabled = true;
+  document.getElementById("quiz-next").hidden = false;
+  document.getElementById("quiz-restart").hidden = true;
+
+  const options = document.getElementById("quiz-options");
+  options.innerHTML = "";
+
+  q.a.forEach((answer, i) => {
+    const button = document.createElement("button");
+    button.className = "quiz-option";
+    button.textContent = answer;
+    button.onclick = () => checkSMCAnswer(i);
+    options.appendChild(button);
+  });
+}
+
+function checkSMCAnswer(choice) {
+  if (smcAnswered) return;
+  smcAnswered = true;
+
+  const q = smcQuestions[smcIndex];
+  const buttons = document.querySelectorAll(".quiz-option");
+
+  buttons.forEach((button, i) => {
+    button.disabled = true;
+    if (i === q.c) button.classList.add("correct");
+    if (i === choice && choice !== q.c) button.classList.add("wrong");
+  });
+
+  if (choice === q.c) {
+    smcScore++;
+    document.getElementById("quiz-feedback").textContent =
+      "Correct! " + q.e;
+  } else {
+    document.getElementById("quiz-feedback").textContent =
+      "Not quite. " + q.e;
+  }
+
+  document.getElementById("quiz-score").textContent =
+    "Score: " + smcScore;
+
+  document.getElementById("quiz-next").disabled = false;
+}
+
+function nextSMCQuestion() {
+  if (!smcAnswered) return;
+
+  smcIndex++;
+
+  if (smcIndex >= smcQuestions.length) {
+    document.getElementById("quiz-question").textContent =
+      "Quiz Completed!";
+
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").textContent =
+      "You scored " + smcScore + " out of " + smcQuestions.length +
+      ". Keep learning and improving your SMC knowledge!";
+
+    document.getElementById("quiz-progress").textContent = "Completed";
+    document.getElementById("quiz-next").hidden = true;
+    document.getElementById("quiz-restart").hidden = false;
+    document.getElementById("quiz-fill").style.width = "100%";
+    return;
+  }
+
+  showSMCQuestion();
+}
+
+function restartSMCQuiz() {
+  smcIndex = 0;
+  smcScore = 0;
+  showSMCQuestion();
+}
+
+showSMCQuestion();
+</script>
+<!-- END SMC NIGHTWATCH QUIZ CENTRE -->
+
 </html>
