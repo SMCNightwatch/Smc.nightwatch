@@ -1,0 +1,13 @@
+
+media: media
+
+content:
+  - name: lessons
+    label: SMC Lessons
+    type: collection
+    path: content/lessons
+    fields:
+      - name: title
+        type: string
+      - name: body
+        type: rich-text
