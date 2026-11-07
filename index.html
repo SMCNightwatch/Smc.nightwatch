@@ -350,7 +350,29 @@ Educational content only. Trading involves risk.
     STUDY • PRACTICE • MASTER THE MARKET
   </p>
 </section>
+-- test --> <!-- SMC NIGHTWATCH STRATEGY LAB -->
+<section id="strategy-lab" style="padding:30px 15px;background:#111;color:white;text-align:center;">
+  <h2 style="color:#d8ad54;">SMC STRATEGY LAB</h2>
+  <p>Plan your trade before entering the market.</p>
 
+  <div style="max-width:400px;margin:auto;">
+    <label>Entry Price</label>
+    <input id="smcEntry" type="number" step="any" placeholder="Enter price" style="width:100%;padding:12px;margin:8px 0;">
+
+    <label>Stop Loss</label>
+    <input id="smcSL" type="number" step="any" placeholder="Enter stop loss" style="width:100%;padding:12px;margin:8px 0;">
+
+    <label>Take Profit</label>
+    <input id="smcTP" type="number" step="any" placeholder="Enter take profit" style="width:100%;padding:12px;margin:8px 0;">
+
+    <button onclick="calculateSMCRR()" style="padding:12px 25px;background:#d8ad54;color:black;border:0;border-radius:5px;font-weight:bold;">
+      CALCULATE RISK/REWARD
+    </button>
+
+    <p id="smcResult" style="color:#d8ad54;margin-top:20px;"></p>
+  </div>
+</section>
+<!-- END SMC NIGHTWATCH STRATEGY LAB -->
 <script>
 const smcQuestions = [
   {
